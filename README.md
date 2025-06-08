@@ -2,7 +2,7 @@ Personal Portfolio Website
 This is my personal portfolio website created using HTML and CSS. It showcases my projects, skills, and contact information.
 
 Live Demo
-You can check it out here: [Your Live Link](https://github.io/nitindaswani/Portfolio/)
+You can check it out here: [Your Live Link](https://nitindaswani.github.io/Portfolio)
 
 Features
 - Clean and responsive design
