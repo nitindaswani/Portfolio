@@ -138,11 +138,12 @@ main{
     border:1px solid rgb(187, 187, 187);
     padding-left: 10px;
     display: block;
-
+    font-size: 16px;
 }
 .form button{
     width: 412px;
     height: 30px;
+    font-size: 16px;
     border: 1px solid black;
     border-radius: 6px;
     background-color: darkblue;
@@ -176,7 +177,10 @@ main{
     .div2{
         grid-template-columns: 1fr;
     }
-    .form input,.form button{
-        width: 100%;
+    .form button{
+        width: 212px;
+    }
+    .form input{
+        width: 200px;
     }
 }
