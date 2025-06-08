@@ -1,0 +1,183 @@
+html{
+    scroll-behavior: smooth;
+}
+*{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+header{
+    display: grid;
+    grid-template-columns: 60% 40%;
+    height: 30vh;
+    width: 100%;
+    justify-content: start;
+    align-items: center;
+    background-color: darkblue;
+}
+.name{
+    font-weight: 900;
+    margin: 10px;
+}
+.pos{
+    font-weight: 600;
+    margin: 10px;
+}
+.photo{
+    border-radius: 50%;
+    width: 170px;
+    height: 170px;
+}
+.view_work{
+    background-color: darkblue;
+    text-decoration: none;
+    color: white;
+    display: inline-block;
+    width: 150px;
+    text-align: center;
+    line-height: 30px; 
+    height: 30px;
+    border-radius: 7px;
+    font-weight: 200;
+    border:1px solid  white;
+    margin: 10px;
+}
+.resume{
+    background-color: darkblue;
+    text-decoration: none;
+    color: white;
+    display: inline-block;
+    width: 100px;
+    text-align: center;
+    line-height: 30px; 
+    height: 30px;
+    border-radius: 7px;
+    font-weight: 200;
+    border:1px solid  white;
+    margin: 10px;
+}
+.div1{
+    color: white;
+    padding: 0px 100px;
+}
+main{
+    display: grid;
+    grid-template-rows: 150px 270px 120px 80px 300px;
+    place-content: center;
+    padding: 50px 100px;
+    color: rgb(44, 43, 43);
+}
+
+.abt h4{
+    margin: 10px;
+}
+.abt h1{
+    margin: 10px;
+}
+.abt p{
+    text-align: justify;
+    margin: 10px;
+}
+.edu,.skills{
+    margin: 10px;
+}
+.skills p{
+    margin: 10px;
+}
+.edu ul,.skills ul{
+    padding: 5px 0px 0px 20px;
+}
+.edu p{
+    margin: 10px ;
+    padding: 0px 0px 10px 0px;
+}
+.edu h4{
+    margin: 10px;
+}
+
+.contact{
+    padding: 50px 10px;
+}
+.contact a{
+    text-decoration: none;   
+    padding: 5px 30px 5px 0px;
+    color: rgb(44, 43, 43);
+    font-weight: 600;
+    font-size: 20px;
+}
+.contact p{
+    padding: 5px 30px 5px 0px;
+    color: rgb(44, 43, 43);
+    display: inline-block;
+    font-size: 18px;
+    font-weight: 600;
+}
+.add_me{
+    padding: 50px 10px;
+}
+.add_me h1{
+    padding: 10px 0px 10px 0px;
+    font-size:45px;
+}
+.add_me h2{
+    font-size: 20px;
+    padding: 10px 0px 10px 0px;
+}
+.div2{
+    display: grid;
+    grid-template-columns: 40% 60%;
+}
+.form{
+    padding: 120px 0px 0px 0px;
+}
+.form input{
+    margin: 0px 5px 10px 0px;
+    width: 400px;
+    height: 30px;
+    border-radius: 6px;
+    border:1px solid rgb(187, 187, 187);
+    padding-left: 10px;
+    display: block;
+
+}
+.form button{
+    width: 412px;
+    height: 30px;
+    border: 1px solid black;
+    border-radius: 6px;
+    background-color: darkblue;
+    color: white;
+    display: block
+}
+.contact a:hover,
+.view_work:hover,
+.form button:hover {
+    opacity: 0.8;
+    cursor: pointer;
+}
+@media(max-width:768px){
+    header{
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+    .div1{
+        padding: 20px;
+    }
+    .photo{
+        margin: 0 auto;
+    }
+    .div2{
+        grid-template-columns: 1fr;
+    }
+    .form input,.form button{
+        width: 100%;
+    }
+}
+/* @media(min-width:1590px){
+    .form input{
+        width: 700px;
+    }
+    .form button{
+        width: 712px;
+    }
+} */
