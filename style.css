@@ -159,6 +159,13 @@ main{
     header{
         grid-template-columns: 1fr;
         text-align: center;
+        height: 50%;
+    }
+    main{
+        grid-template-rows: 350px 590px 200px 230px 350px;
+    }
+    .contact a,.contact p{
+        display: block;
     }
     .div1{
         padding: 20px;
@@ -173,11 +180,3 @@ main{
         width: 100%;
     }
 }
-/* @media(min-width:1590px){
-    .form input{
-        width: 700px;
-    }
-    .form button{
-        width: 712px;
-    }
-} */
