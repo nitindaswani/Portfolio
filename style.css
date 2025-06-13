@@ -152,6 +152,7 @@ main{
 }
 .contact a:hover,
 .view_work:hover,
+.resume:hover,
 .form button:hover {
     opacity: 0.8;
     cursor: pointer;
