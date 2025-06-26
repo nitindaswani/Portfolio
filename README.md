@@ -1,19 +1,40 @@
-Personal Portfolio Website
-This is my personal portfolio website created using HTML and CSS. It showcases my projects, skills, and contact information.
+# 🌐 Personal Portfolio Website
 
-Live Demo
-You can check it out here: [Your Live Link](https://nitindaswani.github.io/Portfolio)
+This is my **personal portfolio website** built using **HTML5** and **CSS3**. It highlights my projects, skills, and contact information in a clean and responsive layout.
 
-Features
-- Clean and responsive design
-- Projects showcase
-- Contact form (non-functional/basic)
-- Pricing plan (basic/premium)
+---
 
-Technologies Used
-- HTML5
-- CSS3
+## 🔗 Live Demo
 
-How to Use
-1. Clone the repo
-2. Open `index.html` in your browser
+👉 [View Portfolio Live](https://nitindaswani.github.io/Portfolio)
+
+---
+
+## ✨ Features
+
+- 💻 **Modern, Clean & Responsive Design**  
+  Optimized for all screen sizes — mobile, tablet, and desktop.
+
+- 🧩 **Projects Showcase**  
+  Displays selected works and projects with brief descriptions.
+
+- 📫 **Contact Section**  
+  Includes a basic contact form (currently non-functional).
+
+- 💰 **Pricing Plan**  
+  Simple pricing table for basic and premium plans (for demo purpose).
+
+---
+
+## 🛠️ Technologies Used
+
+- **HTML5**  
+- **CSS3** (No frameworks or libraries used)
+
+---
+
+## 🚀 How to Use Locally
+
+1. **Clone the Repository**
+   ```bash
+   git clone https://github.com/nitindaswani/Portfolio.git
