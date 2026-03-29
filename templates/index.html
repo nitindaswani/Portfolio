@@ -1,0 +1,167 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<!-- Hero Section -->
+<section id="hero" class="hero-section">
+    <div class="hero-glow"></div>
+    <div class="hero-content">
+        <h1 class="hero-title">Nitin <span class="highlight">Daswani</span></h1>
+        <h2 class="role">Backend Developer & System Builder</h2>
+        <div class="typing-container">
+            <span id="typing-text"></span><span class="cursor">|</span>
+        </div>
+        <div class="hero-actions">
+            <a href="#projects" class="btn primary-btn">View Projects</a>
+            <a href="{% static 'files/Nitin_Daswani_Resume.pdf' %}" class="btn secondary-btn" target="_blank">Download Resume</a>
+            <a href="#contact" class="btn glass-btn">Contact</a>
+        </div>
+    </div>
+</section>
+
+<!-- Story Section -->
+<section id="story" class="story-section alternate-bg">
+    <h2 class="section-title">The Builder <span class="highlight">Journey</span></h2>
+    <p class="story-intro">My journey began with small Python scripts, solving basic problems. But curiosity pushed me to design real-world, scalable systems.</p>
+    
+    <div class="timeline-container">
+        {% for evt in timeline %}
+        <div class="timeline-item">
+            <div class="timeline-marker {{ evt.category|lower }}"></div>
+            <div class="timeline-content">
+                <h3>{{ evt.title }}</h3>
+                <span class="date">{{ evt.date }}</span>
+                <p>{{ evt.description }}</p>
+            </div>
+        </div>
+        {% empty %}
+        <div class="timeline-item"><div class="timeline-marker green"></div><div class="timeline-content"><h3>Python Basics</h3><span class="date">Early Learning</span><p>Data structures & logic building</p></div></div>
+        <div class="timeline-item"><div class="timeline-marker yellow"></div><div class="timeline-content"><h3>Django</h3><span class="date">Web Applications</span><p>Real web applications</p></div></div>
+        <div class="timeline-item"><div class="timeline-marker orange"></div><div class="timeline-content"><h3>Full-Stack Systems</h3><span class="date">System Architecture</span><p>APIs, databases, user flows</p></div></div>
+        <div class="timeline-item"><div class="timeline-marker red"></div><div class="timeline-content"><h3>AI & Computer Vision</h3><span class="date">Advanced Systems</span><p>Face recognition & automation</p></div></div>
+        {% endfor %}
+    </div>
+</section>
+
+<!-- Skills Section -->
+<section id="skills" class="skills-section">
+    <h2 class="section-title">Tech <span class="highlight">Ecosystem</span></h2>
+    <div class="skills-ecosystem">
+        {% regroup skills by category as grouped_skills %}
+        {% for group in grouped_skills %}
+        <div class="skill-group {% if group.grouper == 'Core Focus' or group.grouper == 'Backend Engineering' %}primary-group{% elif group.grouper == 'AI & Computer Vision' or group.grouper == 'Databases & Data' %}secondary-group{% else %}tertiary-group{% endif %}">
+            <h3 class="group-title">{{ group.grouper }}</h3>
+            <div class="group-nodes">
+                {% for skill in group.list %}
+                <span class="node {% if skill.name|lower == 'python' %}core-node{% endif %}">{{ skill.name }}</span>
+                {% endfor %}
+            </div>
+        </div>
+        {% empty %}
+        <div class="skill-group">
+            <h3 class="group-title">Backend</h3>
+            <div class="group-nodes">
+                <span class="node core-node">Python</span>
+                <span class="node">Django</span>
+                <span class="node">REST APIs</span>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</section>
+
+<!-- Projects Deep Dive -->
+<section id="projects" class="projects-section alternate-bg">
+    <h2 class="section-title">Engineering <span class="highlight">Masterpieces</span></h2>
+    <div class="projects-grid">
+        {% for proj in projects %}
+        <div class="project-card">
+            {% if proj.image %}
+            <div class="project-img-wrapper">
+                <img src="{{ proj.image.url }}" alt="{{ proj.title }}">
+            </div>
+            {% endif %}
+            <div class="project-info">
+                <span class="project-category">{{ proj.category }}</span>
+                <h3>{{ proj.title }}</h3>
+                <p>{{ proj.description }}</p>
+                <div class="tech-stack">
+                    {{ proj.tech_stack }}
+                </div>
+                <div class="project-links" style="margin-top: 15px;">
+                    {% if proj.link %}
+                    <a href="{{ proj.link }}" class="btn outline-btn" target="_blank">View System</a>
+                    {% endif %}
+                    {% if proj.github_link %}
+                    <a href="{{ proj.github_link }}" class="btn outline-btn" target="_blank" style="margin-left: 10px;">GitHub</a>
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+        {% empty %}
+        <div class="project-card">
+            <div class="project-info">
+                <span class="project-category">E-Commerce</span>
+                <h3>Sheesho - Full Django System</h3>
+                <p>A complete backend-driven commerce platform prioritizing Multi-app Django architecture.</p>
+                <div class="tech-stack">Django, SQLite, HTML/CSS</div>
+                <div class="project-links">
+                    <a href="#" class="btn outline-btn">View System</a>
+                </div>
+            </div>
+        </div>
+        <div class="project-card">
+            <div class="project-info">
+                <span class="project-category">Full Stack + API</span>
+                <h3>Workshop Management System</h3>
+                <p>Designed a production-style system bridging APIs, secure user flows, and real-world event dynamics.</p>
+                <div class="tech-stack">Django REST backend, JavaScript</div>
+                <div class="project-links">
+                    <a href="#" class="btn outline-btn">View System</a>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</section>
+
+<!-- Ask Nitin AI -->
+<section id="ask-nitin" class="ask-section">
+    <h2 class="section-title">Ask <span class="highlight">Nitin AI</span></h2>
+    <div class="chat-container">
+        <div class="chat-box" id="chat-box">
+            <div class="message bot">
+                <div class="avatar bot-avatar">N</div>
+                <div class="msg-content">Hello! Ask me about Nitin's projects, stack, or experience.</div>
+            </div>
+        </div>
+        <div class="chat-suggestions">
+            <button class="suggestion-chip">What is your tech stack?</button>
+            <button class="suggestion-chip">Explain Sheesho project</button>
+            <button class="suggestion-chip">How can I contact you?</button>
+        </div>
+        <div class="chat-input-area">
+            <input type="text" id="chat-input" placeholder="e.g. How does your face recognition system work?">
+            <button id="chat-send" class="btn primary-btn">Send</button>
+        </div>
+    </div>
+</section>
+
+<!-- Contact Section -->
+<section id="contact" class="contact-section alternate-bg">
+    <h2 class="section-title">Initiate <span class="highlight">Connection</span></h2>
+    <form id="contact-form" class="contact-form" action="https://formspree.io/f/xqegajbg" method="POST">
+        <div class="input-group">
+            <input type="text" id="contact-name" name="name" required placeholder="Name / ID">
+        </div>
+        <div class="input-group">
+            <input type="email" id="contact-email" name="email" required placeholder="Email Address">
+        </div>
+        <div class="input-group">
+            <textarea id="contact-message" name="message" required placeholder="Your Message"></textarea>
+        </div>
+        <button type="submit" class="btn primary-btn">Transmit</button>
+        <div id="contact-status"></div>
+    </form>
+</section>
+{% endblock %}

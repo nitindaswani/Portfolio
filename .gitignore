@@ -1,0 +1,29 @@
+# Environments
+.env
+.venv
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+
+# Django / Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+db.sqlite3
+db.sqlite3-journal
+
+# Media / Static
+media/
+# static/ files are usually committed if they are source files, 
+# but uncomment the line below if you run collectstatic to a different directory
+# staticfiles/
+
+# IDEs and OS
+.vscode/
+.idea/
+.DS_Store
+*.sublime-workspace
+*.sublime-project

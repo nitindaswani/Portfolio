@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nitin Daswani | Portfolio</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Poppins:wght@600;700&family=Roboto+Mono&display=swap" rel="stylesheet">
+    <!-- Custom CSS -->
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body>
+    <nav class="glass-nav">
+        <div class="logo"></div>
+        <ul class="nav-links">
+            <li><a href="#hero">System</a></li>
+            <li><a href="#story">Journey</a></li>
+            <li><a href="#skills">Ecosystem</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Communicate</a></li>
+        </ul>
+        <button class="terminal-btn" id="open-terminal_btn">Terminal</button>
+    </nav>
+
+    <main>
+        {% block content %}
+        {% endblock %}
+    </main>
+
+    <footer class="glass-footer">
+        <div class="footer-content">
+            <p>“I started with curiosity. I built with consistency. Now I design systems. Next — I build impact.”</p>
+            <div class="social-links">
+                <a href="#">GitHub</a>
+                <a href="#">LinkedIn</a>
+                <a href="#">Email</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Terminal Overlay (Easter Egg) -->
+    <div id="terminal-overlay" class="hidden">
+        <div class="terminal-window glass-panel">
+            <div class="terminal-header">
+                <span class="dot red" id="close-terminal"></span>
+                <span class="dot yellow"></span>
+                <span class="dot green"></span>
+                <span class="title">admin@system: ~</span>
+            </div>
+            <div class="terminal-body" id="terminal-body">
+                <p>Welcome to ND-OS v2.0</p>
+                <p>Type "help" to see available commands.</p>
+                <div class="input-line">
+                    <span class="prompt">guest@system:~$</span>
+                    <input type="text" id="terminal-input" autocomplete="off" autofocus>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- GSAP -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <!-- AI Chat Deps -->
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/dompurify/3.0.6/purify.min.js"></script>
+    <script src="{% static 'js/main.js' %}"></script>
+</body>
+</html>
