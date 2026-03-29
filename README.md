@@ -224,4 +224,5 @@ Nitin Daswani
 
 - Location: Jodhpur, Rajasthan, India
 - Email: nitindaswani771@gmail.com
-- GitHub: https://github.com/nitin
+- GitHub: https://github.com/nitindaswani
+- LinkedIn: https://www.linkedin.com/in/nitindaswani/
