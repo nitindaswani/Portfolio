@@ -1,0 +1,11 @@
+# Django Portfolio Project — Dependencies
+# Generated: 2026-04-05
+
+# Core framework
+Django==5.2.10
+
+# Environment variable management
+python-dotenv==1.2.1
+
+# Google Generative AI (Gemini) for the Nitin AI assistant
+google-generativeai==0.8.6
