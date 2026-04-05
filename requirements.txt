@@ -9,6 +9,9 @@ python-dotenv==1.2.1
 # Google Generative AI (Gemini) for the Nitin AI assistant
 google-generativeai==0.8.6
 
+# Image processing (required for ImageField)
+Pillow==11.1.0
+
 # Production server
 gunicorn==23.0.0
 
