@@ -13,3 +13,5 @@ services:
         value: ".onrender.com"
       - key: GEMINI_API_KEY
         sync: false
+      - key: DATABASE_URL
+        value: "postgresql://neondb_owner:npg_uye1KBAJk2jR@ep-ancient-haze-a1rcom9x-pooler.ap-southeast-1.aws.neon.tech/neondb?sslmode=require&channel_binding=require"

@@ -17,3 +17,7 @@ gunicorn==23.0.0
 
 # Static file serving in production
 whitenoise==6.11.0
+
+# PostgreSQL support
+dj-database-url==2.1.0
+psycopg2-binary==2.9.9
