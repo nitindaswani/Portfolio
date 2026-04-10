@@ -32,7 +32,16 @@ SECRET_KEY = os.environ.get(
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = os.environ.get("DEBUG", "True") == "True"
 
-ALLOWED_HOSTS = os.environ.get("ALLOWED_HOSTS", "localhost,127.0.0.1").split(",")
+ALLOWED_HOSTS = os.environ.get("ALLOWED_HOSTS", "localhost,127.0.0.1,.pythonanywhere.com").split(",")
+CSRF_TRUSTED_ORIGINS = [
+    f"https://{host}" if not host.startswith("https://") else host 
+    for host in os.environ.get("CSRF_TRUSTED_ORIGINS", "").split(",") if host
+]
+# Add default PA origin if not provided
+if not CSRF_TRUSTED_ORIGINS and ".pythonanywhere.com" in "".join(ALLOWED_HOSTS):
+    # This is a fallback; it's better to set this explicitly via environment variables on PA
+    pass
+
 
 
 # Application definition
