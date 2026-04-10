@@ -18,6 +18,6 @@ gunicorn==23.0.0
 # Static file serving in production
 whitenoise==6.11.0
 
-# PostgreSQL support
+# Database support for PythonAnywhere
 dj-database-url==2.1.0
-psycopg2-binary==2.9.11
+PyMySQL==1.1.0
