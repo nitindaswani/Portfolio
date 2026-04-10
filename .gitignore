@@ -27,3 +27,11 @@ media/
 .DS_Store
 *.sublime-workspace
 *.sublime-project
+
+.env
+db.sqlite3
+*.pyc
+__pycache__/
+.DS_Store
+media/
+staticfiles/
