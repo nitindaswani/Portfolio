@@ -1,0 +1,4 @@
+import pymysql
+
+# Make PyMySQL work as a drop-in replacement for MySQLdb.
+pymysql.install_as_MySQLdb()
